@@ -1,10 +1,5 @@
-\# Family Tree (C)
-
-
+# Family Tree (C)
 
 Program output:
 
-
-
-!\[Program running](screenshot.png)
-
+![Program running](screenshot.png)
