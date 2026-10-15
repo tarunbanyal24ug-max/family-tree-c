@@ -52,7 +52,15 @@ void print_family_relationships(const Person *me) {
     printf("   - Grandmother: %s | Age: %d\n", me->mother->mother->name, me->mother->mother->age);
 }
 
+void free_family_tree(Person *people[], int count) {
+    for (int i = 0; i < count; i++) {
+        free(people[i]);
+    }
+}
+
 int main() {
+    printf("=== Family Tree Program ===\n\n");
+
     char *roles[7] = {
         "Paternal Grandfather", "Paternal Grandmother",
         "Maternal Grandfather", "Maternal Grandmother",
@@ -73,6 +81,8 @@ int main() {
     link_parents(people[6], people[4], people[5]);
 
     print_family_relationships(people[6]);
+
+    free_family_tree(people, 7);
 
     return 0;
 }
